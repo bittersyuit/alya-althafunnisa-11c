@@ -68,42 +68,106 @@ nav a:hover::after {
         gap: 15px;
     }
 }
-/* ===== Reset & dasar ===== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+main {
+    max-width: 900px;
+    margin: 40px auto;
+    padding: 30px 25px;
+    background-color: #F7F2E6; /* kertas vintage */
+    border-radius: 12px;
+    border: 1px solid #D1BFA7;
+    box-shadow: 0 6px 12px rgba(62, 47, 28, 0.1);
+    font-family: 'Merriweather', serif;
+    color: #3E2F1C;
+    line-height: 1.8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-body {
-    background-color: #F5EFE6; /* cream hangat, vintage */
-    font-family: 'Merriweather', serif; /* klasik & nyaman baca */
-    color: #3E2F1C; /* coklat tua */
-    line-height: 1.6;
-    margin: 20px;
+main:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(62,47,28,0.15);
 }
 
-/* ===== Heading ===== */
-h1 {
-    color: #2E1F0F; /* coklat tinta tua */
-    font-family: 'Playfair Display', serif; /* vintage elegan */
-    text-align: center;
-    margin-bottom: 25px;
+main h1 {
+    font-family: 'Playfair Display', serif;
     font-size: 2.8rem;
+    color: #2E1F0F; /* coklat tinta tua */
+    margin-bottom: 15px;
+    text-align: center;
 }
 
-h2 {
-    color: #4A3B2A; /* coklat lembut */
-    text-align: left;
+main h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2rem;
+    color: #4A3B2A;
+    margin-top: 25px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #A67B5B;
+    display: inline-block;
+    padding-bottom: 4px;
+}
+
+main p {
+    font-size: 18px;
+    color: #5A4A3A;
+    margin-bottom: 15px;
+}
+
+main ul {
+    list-style-type: disc;
+    padding-left: 25px;
+}
+
+main ul li {
+    font-size: 18px;
+    color: #5A4A3A;
     margin-bottom: 10px;
 }
 
-/* ===== Teks & List ===== */
-p, li {
-    font-size: 18px;
-    text-align: left;
-    line-height: 1.6;
-    color: #5A4A3A;
+/* LINK DALAM MAIN (jika ada) */
+main a {
+    color: #A67B5B;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+main a:hover {
+    color: #855E44;
+    text-decoration: underline;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #EDE1C8; /* beige vintage */
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #D1BFA7;
+    font-family: 'Merriweather', serif;
+    color: #3E2F1C;
+    box-shadow: 0 -4px 8px rgba(62,47,28,0.1);
+    margin-top: 40px;
+    border-radius: 0 0 12px 12px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    main {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+
+    main h1 {
+        font-size: 2.2rem;
+    }
+
+    main h2 {
+        font-size: 1.6rem;
+    }
+
+    main p,
+    main ul li {
+        font-size: 16px;
+    }
 }
 
 /* ===== PRODUK ===== */
@@ -746,3 +810,4 @@ footer {
         margin: 0 0 20px 0;
     }
 }
+
