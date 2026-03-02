@@ -1,3 +1,4 @@
+/* ===== BERANDA ===== */
 nav {
     display: flex;
     justify-content: center;
@@ -105,7 +106,7 @@ p, li {
     color: #5A4A3A;
 }
 
-/* ===== Daftar Produk ===== */
+/* ===== PRODUK ===== */
 /* ====== GRID PRODUK ====== */
 .daftar-produk {
     display: grid;
@@ -197,6 +198,7 @@ body {
     box-shadow: 0 4px 12px rgba(90, 70, 52, 0.3);
     transform: translateY(-2px);
 }
+/* ===== BEDAH BUKU ===== */
 /* ===== Artikel ===== */
 .artikel {
     max-width: 700px;
@@ -265,7 +267,7 @@ form button:hover {
     transform: translateY(-2px) scale(1.02);
     box-shadow: 0 6px 12px rgba(62,47,28,0.15);
 }
-
+/* ===== TESTIMONI ===== */
 /* ===== Formulir ===== */
 .formulir {
     max-width: 600px;
@@ -343,46 +345,78 @@ body {
     display: flex;
     flex-direction: column;
 }
+/* ===== TESTIMONI PEMBELI ===== */
+main.formulir {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #F7F2E6; /* kertas vintage */
+    border-radius: 12px;
+    border: 1px solid #D1BFA7;
+    box-shadow: 0 6px 12px rgba(62, 47, 28, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
 
-/* ===== Main Konfirmasi ===== */
-main.konfirmasi {
-    flex: 1;
+main.formulir:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(62,47,28,0.2);
+}
+
+main.formulir h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #2E1F0F;
+    margin-bottom: 25px;
+    border-bottom: 2px solid #A67B5B;
+    padding-bottom: 6px;
+    display: inline-block;
+}
+
+#daftarTestimoni {
+    margin-top: 20px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 50px 20px;
+    gap: 15px;
 }
 
-main.konfirmasi h1 {
-    font-family: 'Playfair Display', serif;
-    font-size: 2.5rem;
-    color: #2E1F0F; /* coklat tinta tua */
-    margin-bottom: 20px;
+.testimoni-item {
+    background-color: #FDF6ED; /* kartu testimoni vintage */
+    border-left: 4px solid #A67B5B;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(62, 47, 28, 0.05);
+    font-style: italic;
+    color: #5A4A3A;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-main.konfirmasi a {
-    display: inline-block;
-    margin-top: 20px;
+.testimoni-item:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(62,47,28,0.15);
+}
+
+/* ===== TOMBOL HAPUS ===== */
+#hapusSemua {
+    margin-top: 25px;
     padding: 12px 25px;
     background-color: #A67B5B; /* coklat hangat */
     color: #FFF8F0;
-    text-decoration: none;
+    border: none;
     border-radius: 8px;
     font-family: 'Merriweather', serif;
     font-weight: 500;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(62,47,28,0.1);
     transition: all 0.3s ease;
 }
 
-main.konfirmasi a:hover {
+#hapusSemua:hover {
     background-color: #855E44; /* coklat lebih gelap */
     transform: translateY(-2px) scale(1.02);
-    box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+    box-shadow: 0 6px 12px rgba(62,47,28,0.15);
 }
 
-/* ===== Footer ===== */
+/* ===== FOOTER ===== */
 footer {
     background-color: #EDE1C8; /* beige vintage */
     text-align: center;
@@ -391,36 +425,324 @@ footer {
     font-family: 'Merriweather', serif;
     color: #3E2F1C;
     box-shadow: 0 -4px 8px rgba(62,47,28,0.1);
+    margin-top: auto;
 }
 
-/* ===== Section Testimoni Terkirim ===== */
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    main.formulir {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    .testimoni-item {
+        padding: 12px 15px;
+    }
+    #hapusSemua {
+        width: 100%;
+        padding: 12px 0;
+    }
+}
+/* ===== PROSES TESTIMONI ===== */
+/* ===== HALAMAN KONFIRMASI / TERIMA KASIH ===== */
+main.konfirmasi {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 60px 20px;
+    background-color: #F4EFE9; /* krem vintage */
+}
+
+main.konfirmasi h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    color: #2E1F0F; /* coklat tinta tua */
+    margin-bottom: 20px;
+}
+
+main.konfirmasi p {
+    font-family: 'Merriweather', serif;
+    font-size: 18px;
+    color: #5A4A3A;
+    margin-bottom: 15px;
+}
+
+main.konfirmasi a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    background-color: #A67B5B; /* coklat hangat */
+    color: #FFF8F0;
+    text-decoration: none;
+    border-radius: 8px;
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    box-shadow: 0 4px 10px rgba(62, 47, 28, 0.1);
+    transition: all 0.3s ease;
+}
+
+main.konfirmasi a:hover {
+    background-color: #855E44; /* coklat lebih gelap */
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(62,47,28,0.15);
+}
+
+/* ===== SECTION TESTIMONI TERKIRIM ===== */
 .testimoni-terkirim {
     margin-top: 30px;
     padding: 25px;
     max-width: 650px;
     width: 100%;
-    background-color: #FDF6ED; /* kertas card */
+    background-color: #FDF6ED; /* kertas card vintage */
+    border-left: 4px solid #A67B5B;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px rgba(62, 47, 28, 0.05);
+    font-style: italic;
+    color: #5A4A3A;
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #EDE1C8; /* beige vintage */
+    text-align: center;
+    padding: 25px;
+    border-top: 1px solid #D1BFA7;
+    font-family: 'Merriweather', serif;
+    color: #3E2F1C;
+    box-shadow: 0 -4px 8px rgba(62,47,28,0.1);
+    margin-top: auto;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    main.konfirmasi {
+        padding: 40px 15px;
+    }
+    .testimoni-terkirim {
+        padding: 20px;
+    }
+}
+/* ===== SECTION KONTAK ===== */
+.section-kontak {
+    max-width: 700px;
+    margin: 50px auto;
+    padding: 30px;
+    background-color: #FDF6ED; /* kertas card vintage */
+    border: 1px solid #D1BFA7; /* border soft coklat muda */
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(62, 47, 28, 0.15);
+    font-family: 'Merriweather', serif;
+    color: #3E2F1C;
+    line-height: 1.8;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.section-kontak:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(62, 47, 28, 0.2);
+}
+
+.section-kontak h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #2E1F0F;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #A67B5B;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.section-kontak p {
+    font-size: 16px;
+    color: #5A4A3A;
+    margin-bottom: 15px;
+}
+
+/* ===== FORM KONTAK ===== */
+.form-kontak {
+    margin-top: 20px;
+}
+
+.form-kontak label {
+    display: block;
+    font-weight: bold;
+    color: #3E2F0F;
+    margin-top: 12px;
+    margin-bottom: 6px;
+}
+
+.form-kontak input,
+.form-kontak textarea {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #D1BFA7;
+    background-color: #fffdf8;
+    font-family: 'Merriweather', serif;
+    color: #4A3B2A;
+    font-size: 16px;
+    margin-bottom: 15px;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.form-kontak textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.form-kontak input:focus,
+.form-kontak textarea:focus {
+    border-color: #A67B5B;
+    box-shadow: 0 0 6px rgba(166,123,91,0.3);
+    outline: none;
+}
+
+/* ===== BUTTON SUBMIT ===== */
+.form-kontak button {
+    background-color: #A67B5B;
+    color: #FFF8F0;
+    padding: 12px 25px;
+    font-family: 'Merriweather', serif;
+    font-weight: 500;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 8px rgba(62,47,28,0.1);
+}
+
+.form-kontak button:hover {
+    background-color: #855E44;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 6px 12px rgba(62,47,28,0.15);
+}
+
+/* ===== INFO KONTAK SAMPING ===== */
+.info-kontak {
+    margin-top: 25px;
+    padding: 20px;
+    background-color: #F7F2E6;
     border-left: 4px solid #A67B5B;
     border-radius: 8px;
     box-shadow: 0 2px 6px rgba(62,47,28,0.05);
     font-style: italic;
+    color: #4A3B2A;
+    line-height: 1.7;
 }
 
-/* ===== Tambahan Modern Subtle ===== */
-body::-webkit-scrollbar {
-    width: 8px;
+.info-kontak p {
+    margin-bottom: 10px;
 }
 
-body::-webkit-scrollbar-thumb {
-    background-color: #A67B5B;
+/* ===== RESPONSIVE ===== */
+@media(max-width: 768px) {
+    .section-kontak {
+        margin: 30px 15px;
+        padding: 25px;
+    }
+}
+/* ===== EVENT & PROMO ===== */
+.container {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 20px;
+}
+
+/* Heading utama halaman */
+.container h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    color: #2E1F0F;
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+/* ===== ARTIKEL EVENT ===== */
+.artikel {
+    max-width: 700px;
+    margin: 40px auto;
+    padding: 30px;
+    background-color: #FDF6ED; /* kertas card vintage */
+    border: 1px solid #D1BFA7;
+    border-radius: 12px;
+    line-height: 1.8;
+    color: #5A4A3A;
+    box-shadow: 0 8px 16px rgba(62, 47, 28, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.artikel:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 24px rgba(62, 47, 28, 0.2);
+}
+
+.artikel h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 24px;
+    color: #2E1F0F;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #A67B5B;
+    display: inline-block;
+    padding-bottom: 6px;
+}
+
+.artikel .penulis {
+    font-style: italic;
+    color: #7A6A58;
+    margin-bottom: 20px;
+}
+
+.artikel ul {
+    list-style-type: disc;
+    margin-left: 20px;
+    margin-bottom: 20px;
+}
+
+.artikel ul li {
+    margin-bottom: 8px;
+    font-size: 16px;
+    color: #5A4A3A;
+}
+
+.artikel p {
+    font-size: 16px;
+    margin-bottom: 15px;
+    color: #5A4A3A;
+}
+
+/* Sampul / gambar artikel */
+.artikel .sampul {
+    width: 180px;
+    float: right;
+    margin: 0 0 20px 20px;
+    border: 1px solid #D1BFA7;
+    background-color: #FFFFFF;
+    box-shadow: 2px 2px 6px rgba(62, 47, 28, 0.2);
+    border-radius: 6px;
+}
+
+/* Blockquote vintage */
+.artikel blockquote {
+    font-style: italic;
+    padding-left: 20px;
+    margin: 20px 0;
+    border-left: 4px solid #7B8A55; /* hijau zaitun */
+    color: #4A3B2A;
+    background-color: #EFE4C8;
     border-radius: 4px;
 }
 
-body::-webkit-scrollbar-track {
-    background-color: #F5EFE6;
-}
-
-body::-webkit-scrollbar-track {
-    background-color: #F5EFE6;
-
+/* RESPONSIVE */
+@media(max-width: 768px) {
+    .artikel {
+        margin: 20px 15px;
+        padding: 20px;
+    }
+    .artikel .sampul {
+        width: 100%;
+        float: none;
+        margin: 0 0 20px 0;
+    }
 }
